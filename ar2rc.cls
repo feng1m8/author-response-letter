@@ -83,7 +83,7 @@ innerleftmargin=0.6em,innerrightmargin=0.6em, linewidth=1pt]{quote}
 \RequirePackage{suffix}
 \long\def\RC#1\par{\makebox[0pt][r]{\bf Comment \CommentNum:\hspace{4mm}}\textbf{\textit{#1}}\par} %\RC
 \WithSuffix\long\def\RC*#1\par{\textbf{\textit{#1}}\par} %\RC*
-\long\def\AR#1\par{\makebox[0pt][r]{Response:\hspace{4mm}}#1\par} %\AR
+\long\def\AR#1\par{\makebox[0pt][r]{Response :\hspace{4mm}}#1\par} %\AR
 \WithSuffix\long\def\AR*#1\par{#1\par} %\AR*
 
 
