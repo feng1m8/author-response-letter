@@ -11,7 +11,7 @@ See the example `ResponseLetter.tex`. Please ensure the class file `ar2rc.cls` i
 ### LaTeX commands
 ```  
 \section{Reviewer 1}
-\subsection{} 
+\subsection{}
 \RC Reviwer comment.
 \AR Author response.
 
@@ -21,7 +21,7 @@ See the example `ResponseLetter.tex`. Please ensure the class file `ar2rc.cls` i
 ```
 
 Then run `pdflatex ResponseLetter.tex` to make `ResponseLetter.pdf`, or typeset with any TeX front-end program.
-
+You can make `ResponseLetter.pdf` via platex, dvips and ps2pdf.
 
 
 ## Change log
