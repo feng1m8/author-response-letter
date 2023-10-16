@@ -20,7 +20,7 @@ See the example `ResponseLetter.tex`. Please ensure the class file `ar2rc.cls` i
 \DIFaddbegin \DIFadd{Added phrase}\DIFaddend
 ```
 
-Then run `pdflatex ReponseLetter.tex` to make `ReponseLetter.pdf`, or typeset with any TeX front-end program.
+Then run `pdflatex ResponseLetter.tex` to make `ResponseLetter.pdf`, or typeset with any TeX front-end program.
 
 
 
