@@ -3,7 +3,7 @@ Latex template to write author response letters to review comments. Based on @ms
 
 
 ## Example
-See the example `ReponseLetter.tex`. Please ensure the class file `ar2rc.cls` is in the same directory.
+See the example `ResponseLetter.tex`. Please ensure the class file `ar2rc.cls` is in the same directory.
 
 <img alt="Screenshot of the output PDF of Simple Response letter" src="./eg.png" style="max-width: 100%" />
 
