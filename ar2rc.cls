@@ -1,7 +1,7 @@
 % An article class for author response to reviewer comment.
 % Copyright (C) 2017 Martin Schroen
 % Modifications Copyright (C) 2020 Kaishuo Zhang
-% Additional Modifications Copyright (C) 2022 Hayato Itoh
+% Further Modifications Copyright (C) 2022 Hayato Itoh
 %
 % This program is free software: you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 \ProvidesClass{ar2rc}[2020/08/04 Author response to reviewer comment class]
 \LoadClass[11pt]{article}
 
-\RequirePackage[includeheadfoot,top=20mm, bottom=20mm,  left=44mm, right=32mm, footskip=2.5cm]{geometry}
+\RequirePackage[includeheadfoot,top=20mm, bottom=20mm, left=44mm, right=32mm, footskip=2.5cm]{geometry}
 
 % Typography
 \RequirePackage[T1]{fontenc}
@@ -44,8 +44,9 @@
 % Section styles
 \RequirePackage{titlesec}
 \titleformat{\section}{\normalfont\large}{\makebox[0pt][r]{\bf \thesection.\hspace{4mm}}}{0em}{\bfseries}
+\titlespacing{\section}{0em}{4.0em}{-1.2em} 
 \titleformat{\subsection}{\normalfont}{\makebox[0pt][r]{\bf \thesubsection.\hspace{4mm}}}{0em}{\bfseries}
-\titlespacing{\subsection}{0em}{0.5em}{-0.3em} % left before after
+\titlespacing{\subsection}{0em}{0.0em}{0.0em} % left before after
 
 % Paragraph styles
 \setlength{\parskip}{0.6\baselineskip}%
@@ -54,7 +55,7 @@
 % Quotation styles
 \RequirePackage{mdframed}
 \renewmdenv[leftmargin=0.4em, rightmargin=0.4em%
-innerleftmargin=0.6em,innerrightmargin=0.6em]{quote}
+innerleftmargin=0.6em,innerrightmargin=0.6em, linewidth=1pt]{quote}
 
 % Table styles
 \let\oldtabular=\tabular
@@ -67,10 +68,11 @@ innerleftmargin=0.6em,innerrightmargin=0.6em]{quote}
 
 %% Add RC and AR to the left of a paragraph
 %\def\RC{\makebox[0pt][r]{\bf RC:\hspace{4mm}}}
-%\def\AR{\makebox[0pt][r]{AR:\hspace{4mm}}}
+%\def\AR{\makebox[0pt][r]{AC:\hspace{4mm}}}
 
 % New counter for Comments
 \newcounter{CntRComment}[section]
+%\setcounter{CntRComment}{0}
 \newcommand{\CommentNum}{
    \ifnum\theCntRComment<1 \stepcounter{CntRComment}\fi
    \theCntRComment
@@ -81,8 +83,10 @@ innerleftmargin=0.6em,innerrightmargin=0.6em]{quote}
 \RequirePackage{suffix}
 \long\def\RC#1\par{\makebox[0pt][r]{\bf Comment \CommentNum:\hspace{4mm}}\textbf{\textit{#1}}\par} %\RC
 \WithSuffix\long\def\RC*#1\par{\textbf{\textit{#1}}\par} %\RC*
-\long\def\AR#1\par{\makebox[0pt][r]{Response:\hspace{10pt}}#1\par} %\AR
+\long\def\AR#1\par{\makebox[0pt][r]{Response:\hspace{4mm}}#1\par} %\AR
 \WithSuffix\long\def\AR*#1\par{#1\par} %\AR*
+
+
 
 %%%
 %DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
@@ -106,7 +110,7 @@ innerleftmargin=0.6em,innerrightmargin=0.6em]{quote}
 %DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 % Define title defaults if not defined by user
-\providecommand{\lettertitle}{Authors' Response to Reviews}
+\providecommand{\lettertitle}{Authors' Responses to Reviews}
 \let\@journal\@empty
 \let\@doi\@empty
 \newcommand{\journal}[1]{\gdef\@journal{#1}}

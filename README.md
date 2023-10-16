@@ -11,9 +11,10 @@ See the example `ReponseLetter.tex`. Please ensure the class file `ar2rc.cls` is
 ### LaTeX commands
 ```  
 \section{Reviewer 1}
-\subsection{}
+\subsection{} 
 \RC Reviwer comment.
 \AR Author response.
+
 \begin{quote} \end{quote}
 \DIFdelbegin \DIFdel{Deleted phrase}\DIFdelend
 \DIFaddbegin \DIFadd{Added phrase}\DIFaddend
@@ -25,8 +26,12 @@ Then run `pdflatex ReponseLetter.tex` to make `ReponseLetter.pdf`, or typeset wi
 
 ## Change log
 
-- Replaced abbreviations of RC and AR with Comment and Response, respectively.
-- Added automatical index insert to `\RC`.
-- Changed the margins.
-- Changed the title's size
+- 2022 10/7
+    - Replaced abbreviations of RC and AR with Comment and Response, respectively
+    - Added automatical index insert to `\RC`
+    - Changed the margins
+    - Changed the title's size
+- 2023 10/7
+    - Changed the margin after \section.
+    - Updated an example
 
