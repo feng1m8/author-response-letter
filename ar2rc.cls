@@ -24,7 +24,7 @@
 
 % Typography
 \RequirePackage[T1]{fontenc}
-\RequirePackage{times}
+\RequirePackage{lmodern}
 %\RequirePackage{mathptmx} % math also in times font
 \RequirePackage{amssymb,amsmath}
 \RequirePackage{microtype}
@@ -44,7 +44,7 @@
 % Section styles
 \RequirePackage{titlesec}
 \titleformat{\section}{\normalfont\large}{\makebox[0pt][r]{\bf \thesection.\hspace{4mm}}}{0em}{\bfseries}
-\titlespacing{\section}{0em}{4.0em}{-1.2em} 
+\titlespacing{\section}{0em}{2.0em}{-1.2em} 
 \titleformat{\subsection}{\normalfont}{\makebox[0pt][r]{\bf \thesubsection.\hspace{4mm}}}{0em}{\bfseries}
 \titlespacing{\subsection}{0em}{0.0em}{0.0em} % left before after
 
@@ -81,8 +81,8 @@ innerleftmargin=0.6em,innerrightmargin=0.6em, linewidth=1pt]{quote}
 
 %% Define that \RC and \AR should start and format the whole paragraph 
 \RequirePackage{suffix}
-\long\def\RC#1\par{\makebox[0pt][r]{\bf Comment \CommentNum:\hspace{4mm}}\textbf{\textit{#1}}\par} %\RC
-\WithSuffix\long\def\RC*#1\par{\textbf{\textit{#1}}\par} %\RC*
+\long\def\RC#1\par{\makebox[0pt][r]{\bf Comment \CommentNum:\hspace{4mm}}#1\par} %\RC
+\WithSuffix\long\def\RC*#1\par{#1\par} %\RC*
 \long\def\AR#1\par{\makebox[0pt][r]{Response :\hspace{4mm}}#1\par} %\AR
 \WithSuffix\long\def\AR*#1\par{#1\par} %\AR*
 
@@ -118,9 +118,9 @@ innerleftmargin=0.6em,innerrightmargin=0.6em, linewidth=1pt]{quote}
 
 % Make title and legend
 \renewcommand\maketitle{
-{\LARGE\bf \lettertitle}\\[1em]
-{\large \@title}\\[1em]
-%{\@author}\\
+{\large\bf \lettertitle}\\[1em]
+{\LARGE \@title}\\[1em]
+{\@author}\\
 %{\it \@journal, }\texttt{\@doi}\\
 %\hrule
 %\hfill {\bfseries RC:} \textbf{\textit{Reviewers' Comment}},\(\quad\) AR: Authors' Response, \(\quad\square\) Manuscript Text
